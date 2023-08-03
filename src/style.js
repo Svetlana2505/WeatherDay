@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-import img from '../src/assets/bg.jpg';
+import img from '../src/assets/bgImage.jpg';
 
 export const Global = createGlobalStyle`
 
@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
    background-attachment: fixed;
+
 }
 
 *{
