@@ -15,7 +15,7 @@ export const Form = ({ setLocation, location, fetchWeather }) => {
     fetchWeather(location);
     setLocation('');
   };
-  console.log(errors);
+
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <StyledInput
