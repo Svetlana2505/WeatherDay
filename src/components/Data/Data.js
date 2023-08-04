@@ -1,8 +1,8 @@
-import { Wrapper, Top, Bottom, DataDay } from './Data.styled';
+import { Top, Bottom, DataDay } from './Data.styled';
 
 export const Data = ({ weather }) => {
   return (
-    <Wrapper>
+    <>
       <Top>
         <div>
           {weather?.main ? <h1>{Math.floor(weather.main.temp)}&deg;</h1> : null}
@@ -42,6 +42,6 @@ export const Data = ({ weather }) => {
           </div>
         </Bottom>
       ) : null}
-    </Wrapper>
+    </>
   );
 };

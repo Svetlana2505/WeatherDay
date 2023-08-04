@@ -1,25 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  p {
-    font-size: 20px;
-    color: #fff;
-  }
-`;
-
 export const Top = styled.div`
   display: flex;
-
-  h1 {
-    font-size: 50px;
-    color: #fff;
-  }
+  align-items: center;
 `;
 
 export const DataDay = styled.div`

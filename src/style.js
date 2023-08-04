@@ -1,15 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-import img from '../src/assets/bgImage.jpg';
 
 export const Global = createGlobalStyle`
 
 body {
-  background-image: url('${img}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-   background-attachment: fixed;
+background-color: #fff;
 
 }
 
@@ -33,6 +28,16 @@ img {
   max-width: 100%;
   height: 100%;
 }
+
+  h1 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  p {
+    font-size: 25px;
+    color: #fff;
+  }
 
 
 `;

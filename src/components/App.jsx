@@ -1,7 +1,7 @@
 import { Form } from './Form/Form';
 import { Container } from './Container';
 import { Data } from './Data/Data';
-
+import { Wrapper } from './App.styled';
 import { useState } from 'react';
 import { fetch } from './api';
 
@@ -15,7 +15,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <Wrapper>
       <Container>
         <Form
           setLocation={setLocation}
@@ -24,6 +24,6 @@ export const App = () => {
         />
         <Data weather={weather} />
       </Container>
-    </div>
+    </Wrapper>
   );
 };
