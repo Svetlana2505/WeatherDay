@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WeatherDay/static/css/main.cd2e038f.css",
-    "main.js": "/WeatherDay/static/js/main.e942b26c.js",
+    "main.js": "/WeatherDay/static/js/main.b0e9724c.js",
     "static/media/bgImage.jpg": "/WeatherDay/static/media/bgImage.2419e230e73491338b81.jpg",
     "index.html": "/WeatherDay/index.html",
     "main.cd2e038f.css.map": "/WeatherDay/static/css/main.cd2e038f.css.map",
-    "main.e942b26c.js.map": "/WeatherDay/static/js/main.e942b26c.js.map"
+    "main.b0e9724c.js.map": "/WeatherDay/static/js/main.b0e9724c.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.e942b26c.js"
+    "static/js/main.b0e9724c.js"
   ]
 }
