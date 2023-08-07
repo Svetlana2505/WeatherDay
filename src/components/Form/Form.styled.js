@@ -9,5 +9,6 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledForm = styled.form`
+  padding-top: 40px;
   margin: 0 auto;
 `;

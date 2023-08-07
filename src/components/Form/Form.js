@@ -1,38 +1,24 @@
-import { useForm } from 'react-hook-form';
-
 import { StyledInput, StyledForm } from './Form.styled';
+import { useState } from 'react';
 
-export const Form = ({ setLocation, location, fetchWeather }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    mode: 'onBlur',
-  });
+export const Form = ({ fetchWeather }) => {
+  const [location, setLocation] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = e => {
+    e.preventDefault();
     fetchWeather(location);
     setLocation('');
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)}>
+    <StyledForm onSubmit={onSubmit}>
       <StyledInput
         type="text"
         name="search"
-        {...register('search', { register: true })}
         value={location}
         onChange={e => setLocation(e.target.value)}
         placeholder="Поиск..."
       />
-      <div>
-        {errors?.search && (
-          <p style={{ fontSize: '20px', textAlign: 'center', color: '#red' }}>
-            {errors?.search.message}
-          </p>
-        )}
-      </div>
     </StyledForm>
   );
 };

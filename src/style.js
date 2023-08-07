@@ -1,20 +1,22 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
+import img from '../src/assets/bgImage.jpg';
 
 export const Global = createGlobalStyle`
 
 body {
 background-color: #fff;
+background-image: url('${img}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 ul {
-
+margin:  0 ;
+padding: 0;
   list-style: none;
 }
 
@@ -29,14 +31,14 @@ img {
   height: 100%;
 }
 
-  h1 {
+  h1,p {
     font-size: 50px;
     color: #fff;
+    margin: 0;
   }
 
   p {
     font-size: 20px;
-    color: #fff;
   }
 
 
