@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
-  margin: ${({ margin }) => margin || '0 auto'};
+  max-width: 800px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10px;
+  margin: 0 auto;
 
   @media screen and (min-width: 360px) {
     padding: 0 15px;

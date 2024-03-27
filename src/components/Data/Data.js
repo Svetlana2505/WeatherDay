@@ -1,26 +1,28 @@
-import { Wrapper, Top, Bottom, DataDay } from './Data.styled';
+import { Wrapper, Top, Bottom, Item } from './Data.styled';
 
 export const Data = ({ weather }) => {
   return (
     <Wrapper>
       <Top>
-        <div>
+        <Item>
           {weather?.main ? <h1>{Math.floor(weather.main.temp)}&deg;</h1> : null}
           {weather?.weather ? (
-            <img
-              src={`http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`}
-              alt=""
-            />
+            <div>
+              <img
+                src={`http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`}
+                alt=""
+              />
+            </div>
           ) : null}
           {weather?.weather ? <p>{weather?.weather[0].description}</p> : null}
-        </div>
+        </Item>
 
-        <DataDay>
+        <Item>
           <p>{weather?.name}</p>
           {weather?.dt ? (
             <p>{new Date(weather?.dt * 1000).toLocaleDateString('en-US')}</p>
           ) : null}
-        </DataDay>
+        </Item>
       </Top>
       {weather?.main ? (
         <Bottom>

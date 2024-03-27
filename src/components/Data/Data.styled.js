@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
+  gap: 150px;
+`;
+
+export const Item = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 `;
 
 export const Top = styled.div`
   display: flex;
-`;
-
-export const DataDay = styled.div`
-  margin-left: auto;
+  gap: 100px;
 `;
 
 export const Bottom = styled.div`

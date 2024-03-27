@@ -17,29 +17,25 @@ export const App = () => {
   };
 
   return (
-    <div>
-      <Container>
-        <div
-          style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
-        >
-          <Form fetchWeather={fetchWeather} />
-          {weather?.status === 404 && (
-            <Stack sx={{ margin: ' auto' }} spacing={2}>
-              <Alert
-                severity="error"
-                sx={{
-                  width: '100%',
-                  background: 'none',
-                  color: 'red',
-                }}
-              >
-                Введите город!
-              </Alert>
-            </Stack>
-          )}
-          <Data weather={weather} />
-        </div>
-      </Container>
-    </div>
+    <Container>
+      <>
+        <Form fetchWeather={fetchWeather} />
+        {weather?.status === 404 && (
+          <Stack sx={{ margin: ' auto' }} spacing={2}>
+            <Alert
+              severity="error"
+              sx={{
+                width: '100%',
+                background: 'none',
+                color: 'red',
+              }}
+            >
+              Введите город!
+            </Alert>
+          </Stack>
+        )}
+        <Data weather={weather} />
+      </>
+    </Container>
   );
 };
