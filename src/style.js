@@ -1,16 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-import img from '../src/assets/bgImage.jpg';
 
 export const Global = createGlobalStyle`
 
 body {
-background-image: url('${img}');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
+color: #000;
 }
 
 ul {

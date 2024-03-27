@@ -1,6 +1,7 @@
 import { Form } from './Form/Form';
 import { Container } from './Container';
 import { Data } from './Data/Data';
+import { Wrapper } from './App.style';
 
 import { useState } from 'react';
 import { fetch } from './api';
@@ -17,25 +18,27 @@ export const App = () => {
   };
 
   return (
-    <Container>
-      <>
-        <Form fetchWeather={fetchWeather} />
-        {weather?.status === 404 && (
-          <Stack sx={{ margin: ' auto' }} spacing={2}>
-            <Alert
-              severity="error"
-              sx={{
-                width: '100%',
-                background: 'none',
-                color: 'red',
-              }}
-            >
-              Введите город!
-            </Alert>
-          </Stack>
-        )}
-        <Data weather={weather} />
-      </>
-    </Container>
+    <Wrapper>
+      <Container>
+        <>
+          <Form fetchWeather={fetchWeather} />
+          {weather?.status === 404 && (
+            <Stack sx={{ margin: ' auto' }} spacing={2}>
+              <Alert
+                severity="error"
+                sx={{
+                  width: '100%',
+                  background: 'none',
+                  color: 'red',
+                }}
+              >
+                Введите город!
+              </Alert>
+            </Stack>
+          )}
+          <Data weather={weather} />
+        </>
+      </Container>
+    </Wrapper>
   );
 };
