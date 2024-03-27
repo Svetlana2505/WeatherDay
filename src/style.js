@@ -5,7 +5,6 @@ import img from '../src/assets/bgImage.jpg';
 export const Global = createGlobalStyle`
 
 body {
-background-color: #fff;
 background-image: url('${img}');
   background-position: center;
   background-repeat: no-repeat;
